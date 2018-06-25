@@ -5,6 +5,24 @@
     <title>title</title>
   </head>
   <body>
-    <h1> You're home</h1>
+    <h1>Welcome to the blog</h1>
+
+
+  <h2> Latest posts</h2>
+  {% for post in posts.all %}
+
+    {{post.title}}
+    <br />
+    {{post.simple_date}}
+    <br />
+    <img src="{{post.image.url}}"/>
+    <br />
+    {{post.preview}}
+    <br />
+    <br />
+
+    {% endfor %}
+
+
   </body>
 </html>
