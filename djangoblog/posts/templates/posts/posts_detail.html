@@ -2,25 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>{{post.title}}</title>
   </head>
   <body>
-    <h1>Welcome to the blog</h1>
+    <h1>{{post.title}}</h1>
 
-
-  <h2> Latest posts</h2>
-  {% for post in posts.all %}
-    <a href="{% url 'post_page' post.id %}">{{post.title}}</a>
     <br />
     {{post.simple_date}}
     <br />
     <img src="{{post.image.url}}"/>
     <br />
-    {{post.preview}}
+    {{post.content}}
     <br />
     <br />
-
-    {% endfor %}
 
 
   </body>
